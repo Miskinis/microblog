@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "29594b620da464787341d99906236752",
+    "content-hash": "85056120f62f710f027f57ad588af1b2",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -604,6 +604,86 @@
                 }
             ],
             "time": "2022-02-20T15:07:15+00:00"
+        },
+        {
+            "name": "graham-campbell/markdown",
+            "version": "v14.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrahamCampbell/Laravel-Markdown.git",
+                "reference": "36dc081ad00ee5abedff939cfccbfc5008eed8eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Markdown/zipball/36dc081ad00ee5abedff939cfccbfc5008eed8eb",
+                "reference": "36dc081ad00ee5abedff939cfccbfc5008eed8eb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.75 || ^9.0",
+                "illuminate/filesystem": "^8.75 || ^9.0",
+                "illuminate/support": "^8.75 || ^9.0",
+                "illuminate/view": "^8.75 || ^9.0",
+                "league/commonmark": "^2.3.1",
+                "php": "^7.4.15 || ^8.0.2"
+            },
+            "require-dev": {
+                "graham-campbell/analyzer": "^3.1",
+                "graham-campbell/testbench": "^5.7",
+                "mockery/mockery": "^1.5",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GrahamCampbell\\Markdown\\MarkdownServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\Markdown\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                }
+            ],
+            "description": "Markdown Is A CommonMark Wrapper For Laravel",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Laravel Markdown",
+                "Laravel-Markdown",
+                "common mark",
+                "commonmark",
+                "framework",
+                "laravel",
+                "markdown"
+            ],
+            "support": {
+                "issues": "https://github.com/GrahamCampbell/Laravel-Markdown/issues",
+                "source": "https://github.com/GrahamCampbell/Laravel-Markdown/tree/v14.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/graham-campbell/markdown",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-05-30T21:37:30+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -3454,6 +3534,66 @@
             "time": "2022-09-16T03:22:46+00:00"
         },
         {
+            "name": "spatie/laravel-sluggable",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-sluggable.git",
+                "reference": "e3b102ef0f0a0bfbba1eca5961a8e33207c76028"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-sluggable/zipball/e3b102ef0f0a0bfbba1eca5961a8e33207c76028",
+                "reference": "e3b102ef0f0a0bfbba1eca5961a8e33207c76028",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^8.0|^9.0",
+                "illuminate/support": "^8.0|^9.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.23|^7.0",
+                "pestphp/pest": "^1.20",
+                "spatie/laravel-translatable": "^5.0|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Sluggable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Generate slugs when saving Eloquent models",
+            "homepage": "https://github.com/spatie/laravel-sluggable",
+            "keywords": [
+                "laravel-sluggable",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-sluggable/issues",
+                "source": "https://github.com/spatie/laravel-sluggable/tree/3.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-03-28T11:21:33+00:00"
+        },
+        {
             "name": "symfony/console",
             "version": "v6.1.6",
             "source": {
@@ -6068,6 +6208,108 @@
                 }
             ],
             "time": "2022-07-11T09:26:42+00:00"
+        },
+        {
+            "name": "davidbadura/faker-markdown-generator",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DavidBadura/FakerMarkdownGenerator.git",
+                "reference": "6fe32b77c3abe3cdf31445ba0b753a2d2f170476"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DavidBadura/FakerMarkdownGenerator/zipball/6fe32b77c3abe3cdf31445ba0b753a2d2f170476",
+                "reference": "6fe32b77c3abe3cdf31445ba0b753a2d2f170476",
+                "shasum": ""
+            },
+            "require": {
+                "davidbadura/markdown-builder": "^1.0.4",
+                "fakerphp/faker": "^1.6",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DavidBadura\\FakerMarkdownGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Badura",
+                    "email": "david.badura@patchlevel.de"
+                }
+            ],
+            "description": "Faker Markdown Generator",
+            "keywords": [
+                "faker",
+                "generator",
+                "markdown"
+            ],
+            "support": {
+                "issues": "https://github.com/DavidBadura/FakerMarkdownGenerator/issues",
+                "source": "https://github.com/DavidBadura/FakerMarkdownGenerator/tree/1.1.1"
+            },
+            "time": "2021-10-22T15:04:49+00:00"
+        },
+        {
+            "name": "davidbadura/markdown-builder",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DavidBadura/markdown-builder.git",
+                "reference": "cdc1a29eb14f3202efb0e59ac80c2acb6f883af0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DavidBadura/markdown-builder/zipball/cdc1a29eb14f3202efb0e59ac80c2acb6f883af0",
+                "reference": "cdc1a29eb14f3202efb0e59ac80c2acb6f883af0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "infection/infection": "^0.22.1",
+                "patchlevel/coding-standard": "^1.0.0",
+                "phpstan/phpstan": "^0.12.85",
+                "phpunit/phpunit": "^9.5.4",
+                "symfony/var-dumper": "^5.2.3",
+                "vimeo/psalm": "^4.7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DavidBadura\\MarkdownBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DavidBadura",
+                    "email": "d.badura@gmx.de"
+                }
+            ],
+            "description": "Markdown Builder",
+            "keywords": [
+                "builder",
+                "markdown",
+                "render",
+                "writer"
+            ],
+            "support": {
+                "issues": "https://github.com/DavidBadura/markdown-builder/issues",
+                "source": "https://github.com/DavidBadura/markdown-builder/tree/1.1.1"
+            },
+            "time": "2021-10-23T09:22:02+00:00"
         },
         {
             "name": "doctrine/instantiator",

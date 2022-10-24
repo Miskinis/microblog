@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Livewire\Blog;
+use App\Http\Livewire\Posts\PostComponent;
+use App\Http\Livewire\Posts\PostCrud;
+use App\Http\Livewire\Posts\UserPosts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::middleware([
     'auth:sanctum',
@@ -26,3 +30,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/', Blog::class);
+Route::get('/post/{post}', PostComponent::class)->name('post');
+Route::get('/user/{user}', UserPosts::class)->name('user');
