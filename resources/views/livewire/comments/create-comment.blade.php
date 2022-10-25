@@ -1,11 +1,10 @@
 <div class="flex mx-auto items-center justify-center shadow-lg">
-    <form wire:submit.prevent="submit" class="w-full max-w-xl bg-white rounded-lg px-4 pt-2">
+    <form wire:submit.prevent="store()" method="POST" id="toast-editor" class="w-full max-w-xl bg-white rounded-lg px-4 pt-2">
         <div class="flex flex-wrap -mx-3 mb-6">
             <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Add a new comment</h2>
-            <div class="w-full md:w-full px-3 mb-2 mt-2">
+            <div wire:ignore class="w-full md:w-full px-3 mb-2 mt-2">
                 <label for="editor" class="text-gray-600 font-semibold">Content</label>
                 <div id="editor" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></div>
-                <input type="hidden" name="content" id="content">
             </div>
             <div class="w-full md:w-full flex items-start md:w-full px-3">
                 <div class="flex items-start w-1/2 text-gray-700 px-2 mr-auto">
@@ -14,8 +13,11 @@
 {{--                    </svg>--}}
 {{--                    <p class="text-xs md:text-sm pt-px">Markdown is supported.</p>--}}
                 </div>
+
+                <input type="hidden" wire:model="content" name="hidden-content" id="hidden-content">
+
                 <div class="-mr-1">
-                    <input type='submit' class="bg-white text-gray-700 font-medium py-1 px-4 border border-gray-400 rounded-lg tracking-wide mr-1 hover:bg-gray-100" value='Post Comment'>
+                    <button type="submit" class="bg-white text-gray-700 font-medium py-1 px-4 border border-gray-400 rounded-lg tracking-wide mr-1 hover:bg-gray-100">Post Comment</button>
                 </div>
             </div>
         </div>

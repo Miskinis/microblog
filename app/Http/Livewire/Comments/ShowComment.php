@@ -14,9 +14,10 @@ class ShowComment extends Component
         return view('livewire.comments.show-comment', ['comment' => $this->comment]);
     }
 
-    public function delete(Comment $comment)
+    public function delete()
     {
-        $comment->delete();
+        $this->comment->delete();
         session()->flash('message', 'Comment deleted');
+        return redirect(request()->header('Referer'));
     }
 }

@@ -12,7 +12,6 @@ class PostPreview extends Component
 
     public function render()
     {
-        $topics = ['Technology', 'Automative', 'Finance', 'Politics', 'Culture', 'Sports'];
-        return view('livewire.post-preview', ['topic' => $topics[array_rand($topics)]]);
+        return view('livewire.post-preview');
     }
 }

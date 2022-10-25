@@ -49,4 +49,9 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function topic()
+    {
+        return $this->belongsTo(Topic::class);
+    }
 }
