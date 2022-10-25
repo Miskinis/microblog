@@ -5,6 +5,8 @@ namespace App\Http\Livewire\Comments;
 use App\Models\Comment;
 use App\Models\Post;
 use App\Models\User;
+use HTMLPurifier;
+use HTMLPurifier_Config;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -43,14 +45,15 @@ class CreateComment extends Component
         }
         $this->validate();
 
+        $purifier = new HTMLPurifier(HTMLPurifier_Config::createDefault());
+
         Comment::create([
             'user_id' => $this->user->id,
             'post_id' => $this->post->id,
-            'content' => $this->content
+            'content' => $purifier->purify($this->content)
         ]);
 
-        session()->flash('message', 'Post Created Successfully.');
         $this->resetInputFields();
-        return redirect(request()->header('Referer'));
+        return redirect(request()->header('Referer'))->with('message', 'Post Created Successfully');
     }
 }

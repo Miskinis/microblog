@@ -31,6 +31,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/', Blog::class);
+Route::get('/', Blog::class)->name('home');
 Route::get('/post/{post}', PostComponent::class)->name('post');
 Route::get('/user/{user}', UserPosts::class)->name('user');

@@ -9,7 +9,7 @@
         <p href="{{route('post', $post->slug)}}" class="text-sm pb-3">
             By <a href="{{route('user', $post->user->slug)}}" class="font-semibold hover:text-gray-800">{{$post->user->name}}</a>, Published on {{$post->created_at}}
         </p>
-        <a href="{{route('post', $post->slug)}}" class="pb-6">
+        <a href="{{route('post', $post->slug)}}" class="pb-6 max-h-72 overflow-hidden fade">
             @markdown($post->content)
         </a>
         <a href="{{route('post', $post->slug)}}" class="uppercase text-gray-800 hover:text-black">Continue Reading <i class="fas fa-arrow-right"></i></a>

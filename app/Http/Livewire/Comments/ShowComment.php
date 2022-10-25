@@ -17,7 +17,6 @@ class ShowComment extends Component
     public function delete()
     {
         $this->comment->delete();
-        session()->flash('message', 'Comment deleted');
-        return redirect(request()->header('Referer'));
+        return redirect(request()->header('Referer'))->with('message', 'Comment deleted');
     }
 }

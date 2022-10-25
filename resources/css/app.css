@@ -3,3 +3,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl;
+    }
+    h2 {
+        @apply text-3xl font-extrabold dark:text-white md:text-3xl lg:text-4xl;
+    }
+    h3 {
+        @apply text-2xl font-extrabold dark:text-white;
+    }
+    h4 {
+        @apply text-xl font-extrabold dark:text-white;
+    }
+    ul {
+        @apply list-disc list-inside my-4 text-lg text-gray-500;
+    }
+    ol {
+        @apply list-decimal list-inside my-4 text-lg text-gray-500;
+    }
+    p {
+        @apply my-4 text-lg text-gray-900;
+    }
+}
+
+.fade {
+    -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+}
