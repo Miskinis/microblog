@@ -1,7 +1,6 @@
 <livewire:blog-navbar :wire:key="uniqid()"/>
 
 <div class="container mx-auto flex flex-wrap py-6">
-    @if(auth()->check() && $authUser->can('view', $post))
     <!-- Post Section -->
     <section class="w-full md:w-2/3 flex flex-col items-center px-3">
         <div class="space-x-12">
@@ -42,9 +41,6 @@
                 </div>
             </article>
         </article>
-        @else
-            <h1 class="py-12">You cannot view this post</h1>
-        @endif
 
         <div class="w-full flex pt-6">
             <a href="#" class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">

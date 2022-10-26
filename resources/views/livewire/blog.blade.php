@@ -8,9 +8,7 @@
             <h1 class="py-12">There are no posts</h1>
         @endif
         @foreach($posts as $post)
-            @if(auth()->check() && $authUser->can('view', $post))
-                <livewire:post-preview :post="$post" :wire:key="'post-preview-one-'.$post->slug"/>
-            @endif
+            <livewire:post-preview :post="$post" :wire:key="'post-preview-one-'.$post->slug"/>
         @endforeach
     </section>
 

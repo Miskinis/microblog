@@ -70,7 +70,6 @@ class CreatePost extends Component
         ])->create();
 
         session()->flash('message', 'Post Created Successfully.');
-        $this->resetInputFields();
 
         return redirect(route('post', $post))->with('message', 'Post Created Successfully');
     }
