@@ -8,29 +8,29 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
-const editor = new Editor({
+const toast_ui_editor_object = new Editor({
     el: document.querySelector('#editor'),
     height: '400px',
     initialEditType: 'markdown',
     placeholder: 'Write something cool!',
     events: {
         blur: function() {
-            document.querySelector('#hidden-content').value = editor.getMarkdown();
+            document.querySelector('#hidden-content').value = toast_ui_editor_object.getMarkdown();
             document.querySelector('#hidden-content').dispatchEvent(new Event('input'));
         }
     }
 })
 
-// document.querySelector('#toast-editor').on('submit', e => {
-//     e.preventDefault();
-//     document.querySelector('#content').value = editor.getMarkdown();
-//     document.querySelector('#content').dispatchEvent(new Event('input'));
-// });
-
-// document.querySelector('#toast-editor').addEventListener('submit', e => {
-//     e.preventDefault();
-//     document.querySelector('#hidden-content').value = editor.getMarkdown();
-//     document.querySelector('#hidden-content').dispatchEvent(new Event('input'));
-// });
+window.toast_ui_editor = {
+    get: function () {
+        return toast_ui_editor_object;
+    },
+    getMarkdown: function() {
+        return toast_ui_editor_object.getMarkdown()
+    },
+    setMarkdown: function(markdown) {
+        toast_ui_editor_object.setMarkdown(markdown);
+    }
+}
 
 

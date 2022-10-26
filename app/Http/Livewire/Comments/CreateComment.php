@@ -40,7 +40,7 @@ class CreateComment extends Component
     public function store()
     {
         if($this->user->cannot('create', Comment::class)) {
-            session()->flash('message', 'Cannon create comment');
+            session()->flash('comment-message', 'Cannot create comment');
             return;
         }
         $this->validate();
@@ -54,6 +54,6 @@ class CreateComment extends Component
         ]);
 
         $this->resetInputFields();
-        return redirect(request()->header('Referer'))->with('message', 'Post Created Successfully');
+        return redirect(request()->header('Referer'))->with('comment-message', 'Comment Created Successfully');
     }
 }

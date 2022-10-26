@@ -1,4 +1,12 @@
 <article class="flex flex-col shadow my-4">
+    <div class="space-x-12 p-4">
+        @if(auth()->check() && auth()->user()->can('update', $post))
+            <a class="text-gray-500 text-xl" href="{{route('post.edit', $post)}}"><i class="fa-solid fa-pen"></i></a>
+        @endif
+        @if(auth()->check() && auth()->user()->can('delete', $post))
+            <button class="text-gray-500 text-xl" wire:click.prevent="delete()" onclick="return confirm('Are you sure you want to delete this post?')"><i class="fa-solid fa-trash"></i></button>
+        @endif
+    </div>
     <!-- Article Image -->
     <a href="{{route('post', $post->slug)}}" class="hover:opacity-75">
         <img src="{{$post->img}}">

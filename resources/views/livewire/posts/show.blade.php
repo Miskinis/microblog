@@ -1,10 +1,17 @@
 <livewire:blog-navbar/>
 
 <div class="container mx-auto flex flex-wrap py-6">
-
+    @if(auth()->check() && $authUser->can('view', $post))
     <!-- Post Section -->
     <section class="w-full md:w-2/3 flex flex-col items-center px-3">
-
+        <div class="space-x-12">
+            @if(auth()->check() && auth()->user()->can('update', $post))
+                <a class="text-gray-500 text-xl" href="{{route('post.edit', $post)}}"><i class="fa-solid fa-pen"></i></a>
+            @endif
+            @if(auth()->check() && auth()->user()->can('delete', $post))
+                <button class="text-gray-500 text-xl" wire:click.prevent="delete()" onclick="return confirm('Are you sure you want to delete this post?')"><i class="fa-solid fa-trash"></i></button>
+            @endif
+        </div>
         <article class="flex flex-col shadow my-4">
             <!-- Article Image -->
             <a href="#" class="hover:opacity-75">
@@ -35,6 +42,9 @@
                 </div>
             </article>
         </article>
+        @else
+            <h1 class="py-12">You cannot view this post</h1>
+        @endif
 
         <div class="w-full flex pt-6">
             <a href="#" class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">

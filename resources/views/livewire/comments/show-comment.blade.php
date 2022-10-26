@@ -8,7 +8,7 @@
                 <div class="flex flex-row justify-between">
                     <a class="relative text-xl overflow-auto" href="{{route('user', $comment->user->slug)}}">{{$comment->user->name}}</a>
                     @if(auth()->check() && auth()->user()->can('delete', $comment))
-                        <button class="text-gray-500 text-xl" wire:click.prevent="delete()"><i class="fa-solid fa-trash"></i></button>
+                        <button class="text-gray-500 text-xl" wire:click.prevent="delete()" onclick="return confirm('Are you sure you want to delete this comment?')"><i class="fa-solid fa-trash"></i></button>
                     @endif
                 </div>
                 <p class="text-gray-400 text-sm">{{$comment->created_at}}</p>

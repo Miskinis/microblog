@@ -14,4 +14,10 @@ class PostPreview extends Component
     {
         return view('livewire.post-preview');
     }
+
+    public function delete()
+    {
+        $this->post->delete();
+        return redirect(request()->header('Referer'))->with('message', 'Post Created Successfully');
+    }
 }
