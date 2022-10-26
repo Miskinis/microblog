@@ -50,7 +50,7 @@ class Posts extends Component
             $posts = $posts->merge($ownPrivatePosts);
             return view('livewire.blog', ['posts' => $this->paginate($posts, 3)]);
         } else {
-            if (isset($this->post)) {
+            if (isset($this->post) && $this->post->is_public) {
                 return view('livewire.posts.show', ['post' => $this->post]);
             }
 
