@@ -23,6 +23,7 @@ For posting stuff.
 * `/api/v1/posts/1` specific post and it's comments
 
 # Run
+* `git clone https://github.com/Miskinis/microblog.git`
 * `cd microblog`
 * `sudo chown -R $USER:www-data .`
 * `sudo find . -type f -exec chmod 664 {} \;`
