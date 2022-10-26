@@ -1,20 +1,26 @@
 # Microblog
+
 For posting stuff.
 
-### Testo tema - "Mikroblogas" (blog):
+* Home page shows snippets of blog posts;
+* User can edit its blog posts;
+* User can comment on public posts.
+* User can set its posts to private (enforced by laravel policies);
+* Create endpoint API for collecting data:
+	* All public posts.
+	* Posts of specific user
+	* Specific post and it's comments
+* Using Tailwind
+* Using Livewire
+* Using MySql
 
-* Pagrindinis langas su atvaizduojamais blog įrašais;
-* Vartotojai gali kurti ir redaguoti savo įrašus (turinys, kas sukūrė ir kada);
-* Vartotojai gali komentuoti viešus įrašus.
-* Įrašo kūrėjas gali pažymėti, kad įrašas privatus (matomas tik jam pačiam) – panaudoti Policy metodą;
-* Padaryti API endpointus (trečiai šaliai duomenų paėmimui) – taip pat su Policy:
-	1. visų įrašų atvaizdavimui
-	2. konkretaus vartotojo visų įrašų atvaizdavimui
-	3. atskiro įrašo ir jo komentarų atvaizdavimui
-
-* Use tailwind css through npm
-* Back-end in Laravel and Livewire
-* Use a database
+# API endpoints 
+* `/api/v1/users/comments/1` specific user comments
+* `/api/v1/users/posts/1` specific user posts and their comments
+* `/api/v1/posts` all posts
+* `/api/v1/comments` all comments
+* `/api/v1/comments/1` specific comment
+* `/api/v1/posts/1` specific post and it's comments
 
 # Run
 * `cd microblog`
