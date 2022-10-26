@@ -30,12 +30,14 @@ For posting stuff.
 * `sudo find . -type d -exec chmod 775 {} \;`
 * `sudo chgrp -R www-data storage bootstrap/cache`
 * `sudo chmod -R ug+rwx storage bootstrap/cache`
-* `docker run --rm \
+* ```
+  docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v $(pwd):/var/www/html \
     -w /var/www/html \
     laravelsail/php81-composer:latest \
-    composer install --ignore-platform-reqs`
+    composer install --ignore-platform-reqs
+    ```
 * `alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'`
 * `sail up -d`
 * `sail npm install && sail npm run build && sail npm run dev`
