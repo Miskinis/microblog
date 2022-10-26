@@ -1,4 +1,4 @@
-<livewire:blog-navbar/>
+<livewire:blog-navbar :wire:key="uniqid()"/>
 
 <div class="container mx-auto flex flex-wrap py-6">
     @if(auth()->check() && $authUser->can('view', $post))

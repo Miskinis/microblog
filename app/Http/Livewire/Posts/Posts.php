@@ -11,7 +11,7 @@ class Posts extends Component
     public ?Post $post;
     public ?User $user;
 
-    public User $authUser;
+    public ?User $authUser;
 
     public function __construct($id = null)
     {

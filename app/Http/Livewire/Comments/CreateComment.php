@@ -12,7 +12,7 @@ use Livewire\Component;
 
 class CreateComment extends Component
 {
-    public User $user;
+    public ?User $user;
     public Post $post;
     public string $content;
 
@@ -23,7 +23,7 @@ class CreateComment extends Component
     public function __construct($id = null)
     {
         parent::__construct($id);
-        $this->user = Auth::user();
+        $this->user = auth()->user();
         $this->content = '';
     }
 

@@ -1,11 +1,11 @@
-<livewire:blog-navbar :wire:key="$authUser->id"/>
+<livewire:blog-navbar :wire:key="uniqid()"/>
 
 <div class="container mx-auto flex flex-wrap py-6">
 
     <!-- Posts Section -->
     <section class="w-full md:w-2/3 flex flex-col items-center px-3">
         @if($posts->count() === 0)
-            <h1 class="py-12">This user has no posts</h1>
+            <h1 class="py-12">There are no posts</h1>
         @endif
         @foreach($posts as $post)
             @if(auth()->check() && $authUser->can('view', $post))

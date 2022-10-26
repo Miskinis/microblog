@@ -30,5 +30,14 @@ For posting stuff.
     laravelsail/php81-composer:latest \
     composer install --ignore-platform-reqs`
 * `alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'`
+* `sail up -d`
 * `sail npm install && sail npm run build && sail npm run dev`
 * `sail artisan migrate --seed`
+
+# Testing
+If new api key was generated, do not forget to copy it from .env to .env.testing
+
+* `alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'`
+* `sail up -d`
+* `sail test --env=testing`
+
